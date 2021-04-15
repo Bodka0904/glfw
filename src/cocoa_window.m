@@ -322,14 +322,6 @@ static const NSRange kEmptyRange = { NSNotFound, 0 };
     _glfwInputWindowFocus(window, GLFW_FALSE);
 }
 
-- (void)windowDidChangeOcclusionState:(NSNotification* )notification
-{
-    if ([window->ns.object occlusionState] & NSWindowOcclusionStateVisible)
-        window->ns.occluded = GLFW_FALSE;
-    else
-        window->ns.occluded = GLFW_TRUE;
-}
-
 @end
 
 
